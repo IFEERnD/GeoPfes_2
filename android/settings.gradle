@@ -1,0 +1,10 @@
+rootProject.name = 'GeoPfes_v7'
+apply from: file("../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesSettingsGradle(settings)
+include ':app'
+includeBuild('../node_modules/@react-native/gradle-plugin')
+include ':@hariks789_react-native-background-geolocation-common'
+project(':@hariks789_react-native-background-geolocation-common').projectDir = new File(rootProject.projectDir, '../node_modules/@hariks789/react-native-background-geolocation/android/common')
+include ':@hariks789_react-native-background-geolocation'
+project(':@hariks789_react-native-background-geolocation').projectDir = new File(rootProject.projectDir, '../node_modules/@hariks789/react-native-background-geolocation/android/lib')
+include ':react-native-camera'
+project(':react-native-camera').projectDir = new File(rootProject.projectDir,   '../node_modules/react-native-camera/android')
